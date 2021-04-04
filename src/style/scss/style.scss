@@ -1,14 +1,13 @@
-$body-color: #222f3a;
-$codecolor: #ffe835;
+@import "../fonts.css";
 
+$body-color: #222f3a;
 
 @function color-test($c1, $c2) {
   @return mix($c1, $c2, 50%)
 }
 
-
 html {
-  --test: red;
+  --test: tomato;
   --card-bg: #c3ccd2
 }
 
@@ -19,7 +18,6 @@ body {
   background-color: color-test($codecolor, $body-color);
 }
 
-
 .card {
   padding: 10px;
   width: 500px;
@@ -28,16 +26,10 @@ body {
   margin: 20px auto;
   background-color: var(--card-bg);
 
-}
-
-
-.code2 {
-  font-family: "MyFont", Arial, sans-serif;
-  background-color: mix(black, aqua, 95%);
-  color: $codecolor;
-  padding: 15px;
-  display: block;
-  font-size: 19px;
-  line-height: 40px;
+  h1 {
+    color: #0cacd4;
+    text-align: center;
+    font-family: "MyFont", Arial, sans-serif;
+  }
 }
 
