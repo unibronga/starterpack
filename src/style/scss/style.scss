@@ -1,14 +1,15 @@
 @import "../fonts.css";
 
-$body-color: #222f3a;
+$codecolor: #000000;
+$body-color: #303a4c;
 
 @function color-test($c1, $c2) {
   @return mix($c1, $c2, 50%)
 }
 
 html {
-  --test: tomato;
-  --card-bg: #c3ccd2
+  --test: $codecolor;
+  --card-bg: #76dbd9
 }
 
 body {
@@ -27,7 +28,7 @@ body {
   background-color: var(--card-bg);
 
   h1 {
-    color: #0cacd4;
+    color: var(--test);
     text-align: center;
     font-family: "MyFont", Arial, sans-serif;
   }
