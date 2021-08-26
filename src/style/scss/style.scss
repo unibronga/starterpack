@@ -1,17 +1,50 @@
 @import "../fonts.css";
 
-$codecolor: #4d4d4d;
-$body-color: #eff5ff;
-
-@function color-test($c1, $c2) {
-    @return mix($c1, $c2, 50%);
-}
-
 :root {
-    --background: #ffffff;
+    --background: #312c33;
+    --background2: #1e1920;
+    --font: #ffffff;
 }
+
 body {
     background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background: linear-gradient(0deg, var(--background2) 50%, var(--background) 50%, var(--background2) 80%);
+}
+
+.myCard {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    color: var(--font);
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(320deg, rgb(255, 252, 78), rgb(255, 56, 162));
+    h1 {
+        position: relative;
+    }
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(320deg, rgb(255, 252, 78), rgb(255, 21, 146));
+        filter: blur(30px);
+        transform: translateY(40px) scale(0.9);
+        opacity: 0.8;
+    }
 }
 
 // Большие девайсы (десктопы, >= 992px)

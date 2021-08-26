@@ -7,4 +7,4 @@ import "./style/scss/style.scss";
 import $ from "jquery";
 import "bootstrap/dist/js/bootstrap";
 
-//import ".././babel.config.json";
+import ".././babel.config.json";
