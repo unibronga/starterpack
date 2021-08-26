@@ -1,35 +1,10 @@
-import './style/scss/style.scss';
-import '.././babel.config.json';
-import { Observable } from 'rxjs';
+// CSS
+import "bootstrap/scss/bootstrap.scss";
+import "./style/scss/style.scss";
 
-const source = Observable.create((observer) => {
-    let count = 0;
+// JS
 
-    console.log('Observable created');
+import $ from "jquery";
+import "bootstrap/dist/js/bootstrap";
 
-    const timer = setInterval(() => {
-        console.log('observer = ', observer.next(count))
-        observer.next(count);
-        count++;
-    }, 1000);
-
-    return () => {
-        console.log('Observable destroyed');
-        clearInterval(timer);
-    }
-});
-
-
-const subscription = source.subscribe(
-    val => console.log('next:', val),
-    err => console.error('error:', err),
-    () => console.log('completed')
-);
-
-// не забываем отписаваться
-setTimeout(() => subscription.unsubscribe(), 4500);
-
-
-
-
-
+//import ".././babel.config.json";

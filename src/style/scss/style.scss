@@ -1,36 +1,23 @@
 @import "../fonts.css";
 
-$codecolor: #000000;
-$body-color: #303a4c;
+$codecolor: #4d4d4d;
+$body-color: #eff5ff;
 
 @function color-test($c1, $c2) {
-  @return mix($c1, $c2, 50%)
+    @return mix($c1, $c2, 50%);
 }
 
-html {
-  --test: $codecolor;
-  --card-bg: #76dbd9
+:root {
+    --background: #ffffff;
 }
-
 body {
-  //background-color: var(--test);
-  //background-color: rgb(blue, 50%);
-  //background-color: mix(#ffffff, #133555, 80%);
-  background-color: color-test($codecolor, $body-color);
+    background-color: var(--background);
 }
 
-.card {
-  padding: 10px;
-  width: 500px;
-  border-radius: 6px;
-  font-family: "MyFont", Arial, sans-serif;
-  margin: 20px auto;
-  background-color: var(--card-bg);
-
-  h1 {
-    color: var(--test);
-    text-align: center;
-    font-family: "MyFont", Arial, sans-serif;
-  }
+// Большие девайсы (десктопы, >= 992px)
+@media (min-width: 992px) {
 }
 
+// Экстрабольшие девайсы (большие десктопы, >= 1200px)
+@media (min-width: 1200px) {
+}
